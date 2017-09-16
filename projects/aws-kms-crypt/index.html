@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Sami Jaktholm</title>
+  <title>aws-kms-crypt</title>
 
   
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quicksand">
@@ -28,7 +28,7 @@
     <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container">
         <div class="navbar-header">
-            <a class="navbar-brand visible-xs" href="#">Sami Jaktholm</a>
+            <a class="navbar-brand visible-xs" href="#">aws-kms-crypt</a>
             <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
@@ -58,16 +58,38 @@
 </nav>
   
   
-<main class="frontpage">
-  <h1>Sami Jaktholm</h1>
+<main class="section-item">
+  <h1>aws-kms-crypt</h1>
+  <p>
+    <i>A cross-language library for encrypting and decrypting secrets
+with the AWS KMS service. Includes support for Bash, Node.js and
+Python.</i>
+  </p>
   <hr />
-  <h2 class="subheading">
-    Data Engineer at <a href="https://www.f-secure.com/">F-Secure</a>.
-    Student at <a href="http://www.aalto.fi/en/">Aalto University</a>.
-  </h2>
-  <div class="action-buttons">
-    <a href="/projects/" class="btn btn-lg">My Projects</a>
+  <div class="text-justify">
+    
+
+<p>aws-kms-crypt is a cross-language utility for securing the confidentiality of
+secrets and sensitive data in AWS. The key features of this tool are:</p>
+
+<ul>
+<li>Simple APIs for encrypting and decrypting sensitive data</li>
+<li>Interoperable implementations for multiple languages (Bash, Node and Python)</li>
+<li><a href="https://docs.aws.amazon.com/kms/latest/developerguide/workflow.html">Envelope Encryption</a> with <code>AES-128-CBC</code> and KMS generated data keys. That is, all secret data is encrypted locally and never sent to Amazon in plain text.</li>
+</ul>
+
+<h2 id="installation">Installation</h2>
+
+<ul>
+<li>Node.js module in NPM: <a href="https://www.npmjs.com/package/aws-kms-crypt">https://www.npmjs.com/package/aws-kms-crypt</a></li>
+<li>Python package in PyPi: <a href="https://pypi.python.org/pypi/aws-kms-crypt">https://pypi.python.org/pypi/aws-kms-crypt</a></li>
+<li>Shell script in Github: <a href="https://github.com/sjakthol/aws-kms-crypt/blob/master/shell/aws-kms-crypt.sh">https://github.com/sjakthol/aws-kms-crypt/blob/master/shell/aws-kms-crypt.sh</a></li>
+</ul>
+
   </div>
+
+  <a class="gh-project-link" href="https://github.com/sjakthol/aws-kms-crypt"><i class="fa fa-github">&nbsp;</i>View in Github</a>
+
 </main>
 
 
