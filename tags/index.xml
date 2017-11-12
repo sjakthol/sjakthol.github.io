@@ -21,9 +21,18 @@
     </item>
     
     <item>
+      <title>Authentication</title>
+      <link>https://sjakthol.github.io/tags/authentication/</link>
+      <pubDate>Sun, 12 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://sjakthol.github.io/tags/authentication/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Aws</title>
       <link>https://sjakthol.github.io/tags/aws/</link>
-      <pubDate>Sun, 10 Sep 2017 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 12 Nov 2017 00:00:00 +0000</pubDate>
       
       <guid>https://sjakthol.github.io/tags/aws/</guid>
       <description></description>
@@ -48,6 +57,15 @@
     </item>
     
     <item>
+      <title>Cloudfront</title>
+      <link>https://sjakthol.github.io/tags/cloudfront/</link>
+      <pubDate>Sun, 12 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://sjakthol.github.io/tags/cloudfront/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Java</title>
       <link>https://sjakthol.github.io/tags/java/</link>
       <pubDate>Sun, 10 Sep 2017 00:00:00 +0000</pubDate>
@@ -66,6 +84,15 @@
     </item>
     
     <item>
+      <title>Lambda</title>
+      <link>https://sjakthol.github.io/tags/lambda/</link>
+      <pubDate>Sun, 12 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://sjakthol.github.io/tags/lambda/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Nodejs</title>
       <link>https://sjakthol.github.io/tags/nodejs/</link>
       <pubDate>Sun, 10 Sep 2017 00:00:00 +0000</pubDate>
@@ -80,6 +107,15 @@
       <pubDate>Sun, 10 Sep 2017 00:00:00 +0000</pubDate>
       
       <guid>https://sjakthol.github.io/tags/python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>S3</title>
+      <link>https://sjakthol.github.io/tags/s3/</link>
+      <pubDate>Sun, 12 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://sjakthol.github.io/tags/s3/</guid>
       <description></description>
     </item>
     

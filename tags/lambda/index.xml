@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Lambda on Sami Jaktholm</title>
+    <link>https://sjakthol.github.io/tags/lambda/</link>
+    <description>Recent content in Lambda on Sami Jaktholm</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 12 Nov 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://sjakthol.github.io/tags/lambda/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>aws-s3-basic-auth</title>
+      <link>https://sjakthol.github.io/projects/aws-s3-basic-auth/</link>
+      <pubDate>Sun, 12 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://sjakthol.github.io/projects/aws-s3-basic-auth/</guid>
+      <description>The aws-s3-basic-auth project contains a setup for protecting access to S3 bucket with HTTP Basic Authentication.
+The setup creates a CloudFront distribution for serving files from the target bucket. A custom Lambda@Edge function is used to authenticate all requests made to the CloudFront distribution. CloudFront authenticates itself to S3 using a custom Origin Access Identity which prevents direct access to the contents of S3.
+The entire setup can be deployed through CloudFormation to protect access to any existing S3 bucket.</description>
+    </item>
+    
+  </channel>
+</rss>
