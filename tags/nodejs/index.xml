@@ -18,7 +18,18 @@
       
       <guid>https://sjakthol.github.io/projects/aws-kms-crypt/</guid>
       <description>aws-kms-crypt is a cross-language utility for managing application secrets within AWS using the KMS service. The key features of this tool are:
- Simple APIs for encrypting and decrypting sensitive data Interoperable implementations for multiple languages (Bash, Node and Python) Envelope Encryption with AES-128-CBC and KMS generated data keys. That is, all secret data is encrypted locally and never sent to Amazon in plain text.  Installation  Node.js module in NPM: https://www.</description>
+Features  Interoperable - Interoperable implementations for Bash, NodeJS, Python and Rust. Secure - AES encryption with KMS generated data keys. Simple - Simple API for encrypting and decrypting sensitive data in all supported languages.  Installation  Node.js module in NPM: https://www.npmjs.com/package/aws-kms-crypt Python package in PyPi: https://pypi.</description>
+    </item>
+    
+    <item>
+      <title>cfn-execute-change-set</title>
+      <link>https://sjakthol.github.io/projects/cfn-execute-changeset/</link>
+      <pubDate>Sun, 10 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://sjakthol.github.io/projects/cfn-execute-changeset/</guid>
+      <description> cfn-execute-change-set is a command line utility for reviewing and executing AWS CloudFormation change sets. The tool parses the output of AWS CLI create-change-set command, prints out a summary of changes and executes the change set if so instructed.
+This utility requires Node.js and can be installed with npm:
+npm install -g cfn-execute-change-set  Links  Package in NPM: https://www.npmjs.com/package/cfn-execute-change-set  </description>
     </item>
     
     <item>

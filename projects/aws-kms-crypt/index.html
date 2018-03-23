@@ -47,9 +47,11 @@
              
             <ul class="nav navbar-nav navbar-right">
                 
-                <li class="navbar-icon"><a href="mailto:sjakthol@outlook.com"><i class="fa fa-envelope-o"></i></a></li>
+                <li class="navbar-icon"><a href="mailto:sjakthol@outlook.com" rel="noopener" target="_blank"><i class="fa fa-envelope-o"></i></a></li>
                 
-                <li class="navbar-icon"><a href="https://github.com/sjakthol/"><i class="fa fa-github"></i></a></li>
+                <li class="navbar-icon"><a href="https://github.com/sjakthol/" rel="noopener" target="_blank"><i class="fa fa-github"></i></a></li>
+                
+                <li class="navbar-icon"><a href="https://www.linkedin.com/in/sjakthol" rel="noopener" target="_blank"><i class="fa fa-linkedin"></i></a></li>
                 
             </ul>
             
@@ -62,8 +64,8 @@
   <h1>aws-kms-crypt</h1>
   <p>
     <i>A cross-language library for encrypting and decrypting secrets
-with the AWS KMS service. Includes support for Bash, Node.js and
-Python.</i>
+with the AWS KMS service. Includes support for Bash, Node.js Rust
+and Python.</i>
   </p>
   <hr />
   <div class="text-justify">
@@ -72,10 +74,12 @@ Python.</i>
 <p><code>aws-kms-crypt</code> is a cross-language utility for managing application secrets
 within AWS using the KMS service. The key features of this tool are:</p>
 
+<h2 id="features">Features</h2>
+
 <ul>
-<li>Simple APIs for encrypting and decrypting sensitive data</li>
-<li>Interoperable implementations for multiple languages (Bash, Node and Python)</li>
-<li><a href="https://docs.aws.amazon.com/kms/latest/developerguide/workflow.html">Envelope Encryption</a> with <code>AES-128-CBC</code> and KMS generated data keys. That is, all secret data is encrypted locally and never sent to Amazon in plain text.</li>
+<li><strong>Interoperable</strong> - Interoperable implementations for Bash, NodeJS, Python and Rust.</li>
+<li><strong>Secure</strong> - AES encryption with KMS generated data keys.</li>
+<li><strong>Simple</strong> - Simple API for encrypting and decrypting sensitive data in all supported languages.</li>
 </ul>
 
 <h2 id="installation">Installation</h2>
@@ -84,6 +88,7 @@ within AWS using the KMS service. The key features of this tool are:</p>
 <li>Node.js module in NPM: <a href="https://www.npmjs.com/package/aws-kms-crypt">https://www.npmjs.com/package/aws-kms-crypt</a></li>
 <li>Python package in PyPi: <a href="https://pypi.python.org/pypi/aws-kms-crypt">https://pypi.python.org/pypi/aws-kms-crypt</a></li>
 <li>Shell script in Github: <a href="https://github.com/sjakthol/aws-kms-crypt/blob/master/shell/aws-kms-crypt.sh">https://github.com/sjakthol/aws-kms-crypt/blob/master/shell/aws-kms-crypt.sh</a></li>
+<li>Rust package in crates.io: <a href="https://crates.io/crates/aws_kms_crypt">https://crates.io/crates/aws_kms_crypt</a></li>
 </ul>
 
   </div>

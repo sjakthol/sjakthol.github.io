@@ -47,9 +47,11 @@
              
             <ul class="nav navbar-nav navbar-right">
                 
-                <li class="navbar-icon"><a href="mailto:sjakthol@outlook.com"><i class="fa fa-envelope-o"></i></a></li>
+                <li class="navbar-icon"><a href="mailto:sjakthol@outlook.com" rel="noopener" target="_blank"><i class="fa fa-envelope-o"></i></a></li>
                 
-                <li class="navbar-icon"><a href="https://github.com/sjakthol/"><i class="fa fa-github"></i></a></li>
+                <li class="navbar-icon"><a href="https://github.com/sjakthol/" rel="noopener" target="_blank"><i class="fa fa-github"></i></a></li>
+                
+                <li class="navbar-icon"><a href="https://www.linkedin.com/in/sjakthol" rel="noopener" target="_blank"><i class="fa fa-linkedin"></i></a></li>
                 
             </ul>
             
@@ -102,7 +104,7 @@ The entire setup can be deployed through CloudFormation to protect access to any
   <h6>September 10, 2017</h6>
 
   <p>aws-kms-crypt is a cross-language utility for managing application secrets within AWS using the KMS service. The key features of this tool are:
- Simple APIs for encrypting and decrypting sensitive data Interoperable implementations for multiple languages (Bash, Node and Python) Envelope Encryption with AES-128-CBC and KMS generated data keys. That is, all secret data is encrypted locally and never sent to Amazon in plain text.  Installation  Node.js module in NPM: https://www.</p>
+Features  Interoperable - Interoperable implementations for Bash, NodeJS, Python and Rust. Secure - AES encryption with KMS generated data keys. Simple - Simple API for encrypting and decrypting sensitive data in all supported languages.  Installation  Node.js module in NPM: https://www.npmjs.com/package/aws-kms-crypt Python package in PyPi: https://pypi.</p>
   
     <div>
       <a href="/projects/aws-kms-crypt/">Read More…</a>
@@ -114,12 +116,12 @@ The entire setup can be deployed through CloudFormation to protect access to any
 
     
       <div class="item">
-    <h4><a href="/projects/cfn-monitor/">cfn-monitor</a></h4>
+    <h4><a href="/projects/cfn-execute-changeset/">cfn-execute-change-set</a></h4>
   <h6>September 10, 2017</h6>
 
-  <p> cfn-monitor is a command line utility for monitoring the progress of CloudFormation stack operations. The tool parses the output of the AWS CLI create-stack and update-stack commands, listens for the stack events of the affected stacks and prints them out to the terminal as they occur.
+  <p> cfn-execute-change-set is a command line utility for reviewing and executing AWS CloudFormation change sets. The tool parses the output of AWS CLI create-change-set command, prints out a summary of changes and executes the change set if so instructed.
 This utility requires Node.js and can be installed with npm:
-npm install -g cfn-monitor  Links  Package in NPM: https://www.npmjs.com/package/cfn-monitor  </p>
+npm install -g cfn-execute-change-set  Links  Package in NPM: https://www.npmjs.com/package/cfn-execute-change-set  </p>
   
 
   <hr>
@@ -129,6 +131,17 @@ npm install -g cfn-monitor  Links  Package in NPM: https://www.npmjs.com/package
   
 
 </main>
+
+
+
+  <div class="pages">
+    
+    
+      <a class="icon pages-icon" href="/tags/aws/page/2/" rel="next">
+          <span>Older Posts</span> <i class="fa fa-arrow-right"></i>
+      </a>
+    
+  </div>
 
 
 
