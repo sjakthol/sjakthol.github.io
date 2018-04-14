@@ -8,7 +8,7 @@
   <title>S3</title>
 
   
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quicksand">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito">
 
   
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -29,13 +29,13 @@
     <div class="container">
         <div class="navbar-header">
             <a class="navbar-brand visible-xs" href="#">S3</a>
-            <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
+            <button class="navbar-toggle" id="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             </button>
         </div>
-        <div class="collapse navbar-collapse">
+        <div class="collapse navbar-collapse" id="navbar-menu">
             
             <ul class="nav navbar-nav">
                 
@@ -58,6 +58,19 @@
         </div>
     </div>
 </nav>
+
+<script>
+    var toggle = document.getElementById('navbar-toggle')
+    toggle.addEventListener('click', function (ev) {
+        var menu = document.getElementById('navbar-menu')
+        if (menu.classList.contains('in')) {
+            menu.classList.remove('in')
+        } else {
+            menu.classList.add('in')
+        }
+    })
+
+</script>
   
   
 <main class="section-index">
@@ -68,11 +81,11 @@
     
       <div class="item">
     <h4><a href="/projects/aws-s3-basic-auth/">aws-s3-basic-auth</a></h4>
-  <h6>November 12, 2017</h6>
+  
 
-  <p>The aws-s3-basic-auth project contains a setup for protecting access to S3 bucket with HTTP Basic Authentication.
-The setup creates a CloudFront distribution for serving files from the target bucket. A custom Lambda@Edge function is used to authenticate all requests made to the CloudFront distribution. CloudFront authenticates itself to S3 using a custom Origin Access Identity which prevents direct access to the contents of S3.
-The entire setup can be deployed through CloudFormation to protect access to any existing S3 bucket.</p>
+  <p>Protect access to S3 bucket with HTTP Basic Authentication. Powered by AWS
+CloudFront and Lambda@Edge.
+</p>
   
     <div>
       <a href="/projects/aws-s3-basic-auth/">Read More…</a>
@@ -85,8 +98,10 @@ The entire setup can be deployed through CloudFormation to protect access to any
     
   
 
-</main>
+  
 
+
+</main>
 
 
 
@@ -94,8 +109,6 @@ The entire setup can be deployed through CloudFormation to protect access to any
       <p class="text-muted">Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a>.</p>
     </footer>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script async src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     
   </body>
 </html>

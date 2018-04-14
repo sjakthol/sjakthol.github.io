@@ -8,7 +8,7 @@
   <title>Python</title>
 
   
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quicksand">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito">
 
   
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -29,13 +29,13 @@
     <div class="container">
         <div class="navbar-header">
             <a class="navbar-brand visible-xs" href="#">Python</a>
-            <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
+            <button class="navbar-toggle" id="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             </button>
         </div>
-        <div class="collapse navbar-collapse">
+        <div class="collapse navbar-collapse" id="navbar-menu">
             
             <ul class="nav navbar-nav">
                 
@@ -58,20 +58,35 @@
         </div>
     </div>
 </nav>
+
+<script>
+    var toggle = document.getElementById('navbar-toggle')
+    toggle.addEventListener('click', function (ev) {
+        var menu = document.getElementById('navbar-menu')
+        if (menu.classList.contains('in')) {
+            menu.classList.remove('in')
+        } else {
+            menu.classList.add('in')
+        }
+    })
+
+</script>
   
   
 <main class="section-index">
-  <h1>Python</h1>
+  <h1>PYTHON</h1>
   <h2></h2>
   <hr />
   
     
       <div class="item">
     <h4><a href="/projects/aws-kms-crypt/">aws-kms-crypt</a></h4>
-  <h6>September 10, 2017</h6>
+  
 
-  <p>aws-kms-crypt is a cross-language utility for managing application secrets within AWS using the KMS service. The key features of this tool are:
-Features  Interoperable - Interoperable implementations for Bash, NodeJS, Python and Rust. Secure - AES encryption with KMS generated data keys. Simple - Simple API for encrypting and decrypting sensitive data in all supported languages.  Installation  Node.js module in NPM: https://www.npmjs.com/package/aws-kms-crypt Python package in PyPi: https://pypi.</p>
+  <p>A cross-language library for encrypting and decrypting secrets
+with the AWS KMS service. Includes support for Bash, Node.js Rust
+and Python.
+</p>
   
     <div>
       <a href="/projects/aws-kms-crypt/">Read More…</a>
@@ -84,11 +99,11 @@ Features  Interoperable - Interoperable implementations for Bash, NodeJS, Python
     
       <div class="item">
     <h4><a href="/projects/dedup-simulator/">dedup-simulator</a></h4>
-  <h6>September 10, 2017</h6>
+  
 
-  <p>This simulator was developed to measure the efficiency of an encrypted data deduplication protocol for cloud storage service providers. The protocol was developed by the Secure Systems group at the Aalto University School of Science.
-This simulator consists of various components that can be used to measure the efficiency of the deduplication protocol. These components are:
- Dataset Collector - Collects file size and popularity data from UNIX systems. Upload Request Stream Generator - Generates a stream of upload requests from the collected datasets.</p>
+  <p>A simulator and related scripts for measuring efficiency of an
+encrypted data deduplication solution. https://eprint.iacr.org/2015/455.pdf
+</p>
   
     <div>
       <a href="/projects/dedup-simulator/">Read More…</a>
@@ -101,10 +116,17 @@ This simulator consists of various components that can be used to measure the ef
     
       <div class="item">
     <h4><a href="/projects/vpngate-client/">vpngate-client</a></h4>
-  <h6>September 10, 2017</h6>
+  
 
-  <p>This tool can be used to connect to vpngate.net OpenVPN servers from the command line. It has the following features:
- filter VPNs based on geographic restrictions filters out non-responsive VPNs performs a connection speed test for each candidate VPN blocks all VPN bypassing traffic with iptables  The application is written in python can and be used from most UNIX systems that have Python and OpenVPN available.</p>
+  <p>A command line client for discovering and connecting to vpngate.net
+OpenVPN servers. Features include filtering VPNs by countries and
+geographic regions, built-in speed test of VPNs and iptables based
+blocking of connections that would bypass the VPN tunnel.
+</p>
+  
+    <div>
+      <a href="/projects/vpngate-client/">Read More…</a>
+    </div>
   
 
   <hr>
@@ -113,8 +135,10 @@ This simulator consists of various components that can be used to measure the ef
     
   
 
-</main>
+  
 
+
+</main>
 
 
 
@@ -122,8 +146,6 @@ This simulator consists of various components that can be used to measure the ef
       <p class="text-muted">Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a>.</p>
     </footer>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script async src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     
   </body>
 </html>

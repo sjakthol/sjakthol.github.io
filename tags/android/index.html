@@ -8,7 +8,7 @@
   <title>Android</title>
 
   
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quicksand">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito">
 
   
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -29,13 +29,13 @@
     <div class="container">
         <div class="navbar-header">
             <a class="navbar-brand visible-xs" href="#">Android</a>
-            <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
+            <button class="navbar-toggle" id="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             </button>
         </div>
-        <div class="collapse navbar-collapse">
+        <div class="collapse navbar-collapse" id="navbar-menu">
             
             <ul class="nav navbar-nav">
                 
@@ -58,20 +58,38 @@
         </div>
     </div>
 </nav>
+
+<script>
+    var toggle = document.getElementById('navbar-toggle')
+    toggle.addEventListener('click', function (ev) {
+        var menu = document.getElementById('navbar-menu')
+        if (menu.classList.contains('in')) {
+            menu.classList.remove('in')
+        } else {
+            menu.classList.add('in')
+        }
+    })
+
+</script>
   
   
 <main class="section-index">
-  <h1>Android</h1>
+  <h1>ANDROID</h1>
   <h2></h2>
   <hr />
   
     
       <div class="item">
     <h4><a href="/projects/digitransit-stoptimes-android/">digitransit-stoptimes-android</a></h4>
-  <h6>September 10, 2017</h6>
+  
 
-  <p>This Android application can be used to view real-time departure information of public transportation in the Helsinki metropolitan area. The key features of this Android application are:
- Search stops by their name View stops near your current location View upcoming departures from a stop with real-time predictions Save favorite stops for easy access  The data is provided by HSL through the Digitransit platform.</p>
+  <p>An Android application for accessing real-time departure information of
+public transportation in the Helsinki metropolitan area.
+</p>
+  
+    <div>
+      <a href="/projects/digitransit-stoptimes-android/">Read More…</a>
+    </div>
   
 
   <hr>
@@ -80,8 +98,10 @@
     
   
 
-</main>
+  
 
+
+</main>
 
 
 
@@ -89,8 +109,6 @@
       <p class="text-muted">Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a>.</p>
     </footer>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script async src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     
   </body>
 </html>
