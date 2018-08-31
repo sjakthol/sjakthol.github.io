@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Dynamodb on Sami Jaktholm</title>
+    <link>https://sjakthol.github.io/tags/dynamodb/</link>
+    <description>Recent content in Dynamodb on Sami Jaktholm</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 31 Aug 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://sjakthol.github.io/tags/dynamodb/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>aws-dynamodb-copy</title>
+      <link>https://sjakthol.github.io/projects/aws-dynamodb-copy/</link>
+      <pubDate>Fri, 31 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://sjakthol.github.io/projects/aws-dynamodb-copy/</guid>
+      <description>aws-dynamodb-copy is a simple script that allows you to copy the contents of a DynamoDB table into another table on the same AWS region.
+The script doesn&amp;rsquo;t provide any fancy features. It scans the source table using a parallel scan and writes the items to the target tables in batches. The rate at which items are copied can be tuned to suit the capacity allocated to the target and source tables.</description>
+    </item>
+    
+  </channel>
+</rss>

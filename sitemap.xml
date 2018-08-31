@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://sjakthol.github.io/projects/aws-dynamodb-copy/</loc>
+    <lastmod>2018-08-31T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://sjakthol.github.io/projects/aws-s3-basic-auth/</loc>
     <lastmod>2017-11-12T00:00:00+00:00</lastmod>
   </url>
@@ -61,7 +66,7 @@
   
   <url>
     <loc>https://sjakthol.github.io/tags/aws/</loc>
-    <lastmod>2017-11-12T00:00:00+00:00</lastmod>
+    <lastmod>2018-08-31T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -89,6 +94,12 @@
   </url>
   
   <url>
+    <loc>https://sjakthol.github.io/tags/dynamodb/</loc>
+    <lastmod>2018-08-31T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://sjakthol.github.io/tags/java/</loc>
     <lastmod>2017-09-10T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -108,13 +119,13 @@
   
   <url>
     <loc>https://sjakthol.github.io/tags/nodejs/</loc>
-    <lastmod>2017-09-10T00:00:00+00:00</lastmod>
+    <lastmod>2018-08-31T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://sjakthol.github.io/projects/</loc>
-    <lastmod>2017-11-12T00:00:00+00:00</lastmod>
+    <lastmod>2018-08-31T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -137,7 +148,7 @@
   
   <url>
     <loc>https://sjakthol.github.io/</loc>
-    <lastmod>2017-11-12T00:00:00+00:00</lastmod>
+    <lastmod>2018-08-31T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
