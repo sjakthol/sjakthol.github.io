@@ -1,148 +1,149 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Sami Jaktholm</title>
-    <link>https://sjakthol.github.io/tags/</link>
+    <link>/tags/</link>
     <description>Recent content in Tags on Sami Jaktholm</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 10 Sep 2017 00:00:00 +0000</lastBuildDate>
+    <copyright>&lt;span&gt;Powered by &lt;a href=&#34;https://gohugo.io&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Hugo&lt;/a&gt; and &lt;a href=&#34;https://github.com/panr/hugo-theme-hello-friend&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Hello Friend&lt;/a&gt; theme&lt;/a&gt;&lt;/span&gt;</copyright>
+    <lastBuildDate>Fri, 31 Aug 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://sjakthol.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>Android</title>
-      <link>https://sjakthol.github.io/tags/android/</link>
-      <pubDate>Sun, 10 Sep 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://sjakthol.github.io/tags/android/</guid>
-      <description></description>
-    </item>
     
     <item>
-      <title>Authentication</title>
-      <link>https://sjakthol.github.io/tags/authentication/</link>
-      <pubDate>Sun, 12 Nov 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://sjakthol.github.io/tags/authentication/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Aws</title>
-      <link>https://sjakthol.github.io/tags/aws/</link>
+      <title>aws</title>
+      <link>/tags/aws/</link>
       <pubDate>Fri, 31 Aug 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://sjakthol.github.io/tags/aws/</guid>
+      <guid>/tags/aws/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Bash</title>
-      <link>https://sjakthol.github.io/tags/bash/</link>
-      <pubDate>Sun, 10 Sep 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://sjakthol.github.io/tags/bash/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Cloudformation</title>
-      <link>https://sjakthol.github.io/tags/cloudformation/</link>
-      <pubDate>Sun, 10 Sep 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://sjakthol.github.io/tags/cloudformation/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Cloudfront</title>
-      <link>https://sjakthol.github.io/tags/cloudfront/</link>
-      <pubDate>Sun, 12 Nov 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://sjakthol.github.io/tags/cloudfront/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Dynamodb</title>
-      <link>https://sjakthol.github.io/tags/dynamodb/</link>
+      <title>dynamodb</title>
+      <link>/tags/dynamodb/</link>
       <pubDate>Fri, 31 Aug 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://sjakthol.github.io/tags/dynamodb/</guid>
+      <guid>/tags/dynamodb/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Java</title>
-      <link>https://sjakthol.github.io/tags/java/</link>
-      <pubDate>Sun, 10 Sep 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://sjakthol.github.io/tags/java/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Kms</title>
-      <link>https://sjakthol.github.io/tags/kms/</link>
-      <pubDate>Sun, 10 Sep 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://sjakthol.github.io/tags/kms/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Lambda</title>
-      <link>https://sjakthol.github.io/tags/lambda/</link>
-      <pubDate>Sun, 12 Nov 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://sjakthol.github.io/tags/lambda/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Nodejs</title>
-      <link>https://sjakthol.github.io/tags/nodejs/</link>
+      <title>nodejs</title>
+      <link>/tags/nodejs/</link>
       <pubDate>Fri, 31 Aug 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://sjakthol.github.io/tags/nodejs/</guid>
+      <guid>/tags/nodejs/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Python</title>
-      <link>https://sjakthol.github.io/tags/python/</link>
-      <pubDate>Sun, 10 Sep 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://sjakthol.github.io/tags/python/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Rust</title>
-      <link>https://sjakthol.github.io/tags/rust/</link>
-      <pubDate>Sun, 10 Sep 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://sjakthol.github.io/tags/rust/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>S3</title>
-      <link>https://sjakthol.github.io/tags/s3/</link>
+      <title>authentication</title>
+      <link>/tags/authentication/</link>
       <pubDate>Sun, 12 Nov 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://sjakthol.github.io/tags/s3/</guid>
+      <guid>/tags/authentication/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Shell</title>
-      <link>https://sjakthol.github.io/tags/shell/</link>
+      <title>cloudfront</title>
+      <link>/tags/cloudfront/</link>
+      <pubDate>Sun, 12 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/cloudfront/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>lambda</title>
+      <link>/tags/lambda/</link>
+      <pubDate>Sun, 12 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/lambda/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>s3</title>
+      <link>/tags/s3/</link>
+      <pubDate>Sun, 12 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/s3/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>android</title>
+      <link>/tags/android/</link>
       <pubDate>Sun, 10 Sep 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://sjakthol.github.io/tags/shell/</guid>
+      <guid>/tags/android/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>bash</title>
+      <link>/tags/bash/</link>
+      <pubDate>Sun, 10 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/bash/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>cloudformation</title>
+      <link>/tags/cloudformation/</link>
+      <pubDate>Sun, 10 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/cloudformation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>java</title>
+      <link>/tags/java/</link>
+      <pubDate>Sun, 10 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/java/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>kms</title>
+      <link>/tags/kms/</link>
+      <pubDate>Sun, 10 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/kms/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>python</title>
+      <link>/tags/python/</link>
+      <pubDate>Sun, 10 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>rust</title>
+      <link>/tags/rust/</link>
+      <pubDate>Sun, 10 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/rust/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>shell</title>
+      <link>/tags/shell/</link>
+      <pubDate>Sun, 10 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/shell/</guid>
       <description></description>
     </item>
     

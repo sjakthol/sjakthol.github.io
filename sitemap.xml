@@ -1,167 +1,149 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://sjakthol.github.io/projects/aws-dynamodb-copy/</loc>
+    <loc>/</loc>
+    <lastmod>2019-12-22T08:15:34+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/aws/</loc>
     <lastmod>2018-08-31T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://sjakthol.github.io/projects/aws-s3-basic-auth/</loc>
+    <loc>/projects/aws-dynamodb-copy/</loc>
+    <lastmod>2018-08-31T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/dynamodb/</loc>
+    <lastmod>2018-08-31T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/nodejs/</loc>
+    <lastmod>2018-08-31T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/projects/</loc>
+    <lastmod>2018-08-31T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/</loc>
+    <lastmod>2018-08-31T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/authentication/</loc>
     <lastmod>2017-11-12T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://sjakthol.github.io/projects/aws-account-infra/</loc>
-    <lastmod>2017-09-10T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://sjakthol.github.io/projects/aws-kms-crypt/</loc>
-    <lastmod>2017-09-10T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://sjakthol.github.io/projects/cfn-execute-changeset/</loc>
-    <lastmod>2017-09-10T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://sjakthol.github.io/projects/cfn-monitor/</loc>
-    <lastmod>2017-09-10T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://sjakthol.github.io/projects/dedup-simulator/</loc>
-    <lastmod>2017-09-10T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://sjakthol.github.io/projects/digitransit-stoptimes-android/</loc>
-    <lastmod>2017-09-10T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://sjakthol.github.io/projects/rsync-backup/</loc>
-    <lastmod>2017-09-10T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://sjakthol.github.io/projects/vpngate-client/</loc>
-    <lastmod>2017-09-10T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://sjakthol.github.io/tags/android/</loc>
-    <lastmod>2017-09-10T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://sjakthol.github.io/tags/authentication/</loc>
+    <loc>/projects/aws-s3-basic-auth/</loc>
     <lastmod>2017-11-12T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://sjakthol.github.io/tags/aws/</loc>
-    <lastmod>2018-08-31T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://sjakthol.github.io/tags/bash/</loc>
-    <lastmod>2017-09-10T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://sjakthol.github.io/categories/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://sjakthol.github.io/tags/cloudformation/</loc>
-    <lastmod>2017-09-10T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://sjakthol.github.io/tags/cloudfront/</loc>
+    <loc>/tags/cloudfront/</loc>
     <lastmod>2017-11-12T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://sjakthol.github.io/tags/dynamodb/</loc>
-    <lastmod>2018-08-31T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://sjakthol.github.io/tags/java/</loc>
-    <lastmod>2017-09-10T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://sjakthol.github.io/tags/kms/</loc>
-    <lastmod>2017-09-10T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://sjakthol.github.io/tags/lambda/</loc>
+    <loc>/tags/lambda/</loc>
     <lastmod>2017-11-12T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://sjakthol.github.io/tags/nodejs/</loc>
-    <lastmod>2018-08-31T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://sjakthol.github.io/projects/</loc>
-    <lastmod>2018-08-31T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://sjakthol.github.io/tags/python/</loc>
-    <lastmod>2017-09-10T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://sjakthol.github.io/tags/rust/</loc>
-    <lastmod>2017-09-10T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://sjakthol.github.io/tags/s3/</loc>
+    <loc>/tags/s3/</loc>
     <lastmod>2017-11-12T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://sjakthol.github.io/</loc>
-    <lastmod>2018-08-31T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://sjakthol.github.io/tags/shell/</loc>
+    <loc>/tags/android/</loc>
     <lastmod>2017-09-10T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://sjakthol.github.io/tags/</loc>
+    <loc>/projects/aws-account-infra/</loc>
     <lastmod>2017-09-10T00:00:00+00:00</lastmod>
-    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/projects/aws-kms-crypt/</loc>
+    <lastmod>2017-09-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/bash/</loc>
+    <lastmod>2017-09-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/projects/cfn-execute-changeset/</loc>
+    <lastmod>2017-09-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/projects/cfn-monitor/</loc>
+    <lastmod>2017-09-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/cloudformation/</loc>
+    <lastmod>2017-09-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/projects/dedup-simulator/</loc>
+    <lastmod>2017-09-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/projects/digitransit-stoptimes-android/</loc>
+    <lastmod>2017-09-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/java/</loc>
+    <lastmod>2017-09-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/kms/</loc>
+    <lastmod>2017-09-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/python/</loc>
+    <lastmod>2017-09-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/projects/rsync-backup/</loc>
+    <lastmod>2017-09-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/rust/</loc>
+    <lastmod>2017-09-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/shell/</loc>
+    <lastmod>2017-09-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/projects/vpngate-client/</loc>
+    <lastmod>2017-09-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/categories/</loc>
   </url>
   
 </urlset>

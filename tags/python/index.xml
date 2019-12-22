@@ -1,32 +1,33 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Python on Sami Jaktholm</title>
-    <link>https://sjakthol.github.io/tags/python/</link>
-    <description>Recent content in Python on Sami Jaktholm</description>
+    <title>python on Sami Jaktholm</title>
+    <link>/tags/python/</link>
+    <description>Recent content in python on Sami Jaktholm</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <copyright>&lt;span&gt;Powered by &lt;a href=&#34;https://gohugo.io&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Hugo&lt;/a&gt; and &lt;a href=&#34;https://github.com/panr/hugo-theme-hello-friend&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Hello Friend&lt;/a&gt; theme&lt;/a&gt;&lt;/span&gt;</copyright>
     <lastBuildDate>Sun, 10 Sep 2017 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://sjakthol.github.io/tags/python/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/python/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>aws-kms-crypt</title>
-      <link>https://sjakthol.github.io/projects/aws-kms-crypt/</link>
+      <link>/projects/aws-kms-crypt/</link>
       <pubDate>Sun, 10 Sep 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://sjakthol.github.io/projects/aws-kms-crypt/</guid>
+      <guid>/projects/aws-kms-crypt/</guid>
       <description>aws-kms-crypt is a cross-language utility for managing application secrets within AWS using the KMS service. The key features of this tool are:
 Features  Interoperable - Interoperable implementations for Bash, NodeJS, Python and Rust. Secure - AES encryption with KMS generated data keys. Simple - Simple API for encrypting and decrypting sensitive data in all supported languages.  Installation  Node.js module in NPM: https://www.npmjs.com/package/aws-kms-crypt Python package in PyPi: https://pypi.</description>
     </item>
     
     <item>
       <title>dedup-simulator</title>
-      <link>https://sjakthol.github.io/projects/dedup-simulator/</link>
+      <link>/projects/dedup-simulator/</link>
       <pubDate>Sun, 10 Sep 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://sjakthol.github.io/projects/dedup-simulator/</guid>
+      <guid>/projects/dedup-simulator/</guid>
       <description>This simulator was developed to measure the efficiency of an encrypted data deduplication protocol for cloud storage service providers. The protocol was developed by the Secure Systems group at the Aalto University School of Science.
 This simulator consists of various components that can be used to measure the efficiency of the deduplication protocol. These components are:
  Dataset Collector - Collects file size and popularity data from UNIX systems. Upload Request Stream Generator - Generates a stream of upload requests from the collected datasets.</description>
@@ -34,12 +35,13 @@ This simulator consists of various components that can be used to measure the ef
     
     <item>
       <title>vpngate-client</title>
-      <link>https://sjakthol.github.io/projects/vpngate-client/</link>
+      <link>/projects/vpngate-client/</link>
       <pubDate>Sun, 10 Sep 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://sjakthol.github.io/projects/vpngate-client/</guid>
+      <guid>/projects/vpngate-client/</guid>
       <description>This tool can be used to connect to vpngate.net OpenVPN servers from the command line. It has the following features:
- filter VPNs based on geographic restrictions filters out non-responsive VPNs performs a connection speed test for each candidate VPN blocks all VPN bypassing traffic with iptables  The application is written in python can and be used from most UNIX systems that have Python and OpenVPN available.</description>
+ filter VPNs based on geographic restrictions filters out non-responsive VPNs performs a connection speed test for each candidate VPN blocks all VPN bypassing traffic with iptables  The application is written in python can and be used from most UNIX systems that have Python and OpenVPN available.
+View in Github</description>
     </item>
     
   </channel>

@@ -1,23 +1,25 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Shell on Sami Jaktholm</title>
-    <link>https://sjakthol.github.io/tags/shell/</link>
-    <description>Recent content in Shell on Sami Jaktholm</description>
+    <title>shell on Sami Jaktholm</title>
+    <link>/tags/shell/</link>
+    <description>Recent content in shell on Sami Jaktholm</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <copyright>&lt;span&gt;Powered by &lt;a href=&#34;https://gohugo.io&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Hugo&lt;/a&gt; and &lt;a href=&#34;https://github.com/panr/hugo-theme-hello-friend&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Hello Friend&lt;/a&gt; theme&lt;/a&gt;&lt;/span&gt;</copyright>
     <lastBuildDate>Sun, 10 Sep 2017 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://sjakthol.github.io/tags/shell/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/shell/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>rsync-backup</title>
-      <link>https://sjakthol.github.io/projects/rsync-backup/</link>
+      <link>/projects/rsync-backup/</link>
       <pubDate>Sun, 10 Sep 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://sjakthol.github.io/projects/rsync-backup/</guid>
-      <description>This script can be used to backup local directories over SSH to a remote machine. It uses rsync&amp;rsquo;s --link-dest feature to avoid storing copies of files that have not changed between two snapshots.</description>
+      <guid>/projects/rsync-backup/</guid>
+      <description>This script can be used to backup local directories over SSH to a remote machine. It uses rsync&amp;rsquo;s --link-dest feature to avoid storing copies of files that have not changed between two snapshots.
+View in Github</description>
     </item>
     
   </channel>
