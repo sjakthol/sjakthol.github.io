@@ -50,7 +50,7 @@ CloudFront and Lambda@Edge.
 
 
   </head>
-  <body class="dark-theme">
+  <body class="">
     <div class="container">
       <header class="header">
   <span class="header__inner">
@@ -71,6 +71,10 @@ CloudFront and Lambda@Edge.
     
       
         
+          <li><a href="/posts">Blog</a></li>
+        
+      
+        
           <li><a href="/projects">Projects</a></li>
         
       
@@ -79,6 +83,10 @@ CloudFront and Lambda@Edge.
   </ul>
 
   <ul class="menu__inner menu__inner--mobile">
+    
+      
+        <li><a href="/posts">Blog</a></li>
+      
     
       
         <li><a href="/projects">Projects</a></li>
@@ -95,12 +103,7 @@ CloudFront and Lambda@Edge.
         </span>
       
       <span class="theme-toggle">
-        <svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <path d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
-  3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7
-  13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"/>
-</svg>
-
+        
       </span>
     </span>
   </span>
@@ -142,17 +145,17 @@ CloudFront and Lambda@Edge.
     <div class="post-content">
       <p>The <code>aws-s3-basic-auth</code> project contains a setup for protecting access to S3
 bucket with HTTP Basic Authentication.</p>
-
 <p>The setup creates a CloudFront distribution for serving files from the target
 bucket. A custom Lambda@Edge function is used to authenticate all requests
 made to the CloudFront distribution. CloudFront authenticates itself to S3
 using a custom Origin Access Identity which prevents direct access to the
 contents of S3.</p>
-
 <p>The entire setup can be deployed through CloudFormation to protect access
 to any existing S3 bucket.</p>
 
-<p><a target="_blank" rel="noopener" href="https://github.com/sjakthol/aws-s3-basic-auth">View in Github</a></p>
+
+<a target="_blank" rel="noopener" href="https://github.com/sjakthol/aws-s3-basic-auth">View in Github</a>
+
 
     </div>
     

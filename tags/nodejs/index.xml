@@ -29,7 +29,7 @@ The script doesn&amp;rsquo;t provide any fancy features. It scans the source tab
       
       <guid>/projects/aws-kms-crypt/</guid>
       <description>aws-kms-crypt is a cross-language utility for managing application secrets within AWS using the KMS service. The key features of this tool are:
-Features  Interoperable - Interoperable implementations for Bash, NodeJS, Python and Rust. Secure - AES encryption with KMS generated data keys. Simple - Simple API for encrypting and decrypting sensitive data in all supported languages.  Installation  Node.js module in NPM: https://www.npmjs.com/package/aws-kms-crypt Python package in PyPi: https://pypi.</description>
+Features  Interoperable - Interoperable implementations for Bash, NodeJS, Python and Rust. Secure - AES encryption with KMS generated data keys. Simple - Simple API for encrypting and decrypting sensitive data in all supported languages.  Installation  Node.js module in NPM: https://www.npmjs.com/package/aws-kms-crypt Python package in PyPi: https://pypi.python.org/pypi/aws-kms-crypt Shell script in Github: https://github.</description>
     </item>
     
     <item>
@@ -40,7 +40,7 @@ Features  Interoperable - Interoperable implementations for Bash, NodeJS, Python
       <guid>/projects/cfn-execute-changeset/</guid>
       <description>cfn-execute-change-set is a command line utility for reviewing and executing AWS CloudFormation change sets. The tool parses the output of AWS CLI create-change-set command, prints out a summary of changes and executes the change set if so instructed.
 This utility requires Node.js and can be installed with npm:
-npm install -g cfn-execute-change-set  Links  Package in NPM: https://www.npmjs.com/package/cfn-execute-change-set  View in Github</description>
+npm install -g cfn-execute-change-set Links  Package in NPM: https://www.npmjs.com/package/cfn-execute-change-set  View in Github </description>
     </item>
     
     <item>
@@ -51,7 +51,7 @@ npm install -g cfn-execute-change-set  Links  Package in NPM: https://www.npmjs.
       <guid>/projects/cfn-monitor/</guid>
       <description>cfn-monitor is a command line utility for monitoring the progress of CloudFormation stack operations. The tool parses the output of the AWS CLI create-stack and update-stack commands, listens for the stack events of the affected stacks and prints them out to the terminal as they occur.
 This utility requires Node.js and can be installed with npm:
-npm install -g cfn-monitor  Links  Package in NPM: https://www.npmjs.com/package/cfn-monitor  View in Github</description>
+npm install -g cfn-monitor Links  Package in NPM: https://www.npmjs.com/package/cfn-monitor  View in Github </description>
     </item>
     
   </channel>

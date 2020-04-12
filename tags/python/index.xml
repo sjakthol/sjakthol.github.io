@@ -19,7 +19,7 @@
       
       <guid>/projects/aws-kms-crypt/</guid>
       <description>aws-kms-crypt is a cross-language utility for managing application secrets within AWS using the KMS service. The key features of this tool are:
-Features  Interoperable - Interoperable implementations for Bash, NodeJS, Python and Rust. Secure - AES encryption with KMS generated data keys. Simple - Simple API for encrypting and decrypting sensitive data in all supported languages.  Installation  Node.js module in NPM: https://www.npmjs.com/package/aws-kms-crypt Python package in PyPi: https://pypi.</description>
+Features  Interoperable - Interoperable implementations for Bash, NodeJS, Python and Rust. Secure - AES encryption with KMS generated data keys. Simple - Simple API for encrypting and decrypting sensitive data in all supported languages.  Installation  Node.js module in NPM: https://www.npmjs.com/package/aws-kms-crypt Python package in PyPi: https://pypi.python.org/pypi/aws-kms-crypt Shell script in Github: https://github.</description>
     </item>
     
     <item>
@@ -41,7 +41,7 @@ This simulator consists of various components that can be used to measure the ef
       <guid>/projects/vpngate-client/</guid>
       <description>This tool can be used to connect to vpngate.net OpenVPN servers from the command line. It has the following features:
  filter VPNs based on geographic restrictions filters out non-responsive VPNs performs a connection speed test for each candidate VPN blocks all VPN bypassing traffic with iptables  The application is written in python can and be used from most UNIX systems that have Python and OpenVPN available.
-View in Github</description>
+View in Github </description>
     </item>
     
   </channel>

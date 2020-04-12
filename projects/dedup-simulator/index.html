@@ -50,7 +50,7 @@ encrypted data deduplication solution. https://eprint.iacr.org/2015/455.pdf
 
 
   </head>
-  <body class="dark-theme">
+  <body class="">
     <div class="container">
       <header class="header">
   <span class="header__inner">
@@ -71,6 +71,10 @@ encrypted data deduplication solution. https://eprint.iacr.org/2015/455.pdf
     
       
         
+          <li><a href="/posts">Blog</a></li>
+        
+      
+        
           <li><a href="/projects">Projects</a></li>
         
       
@@ -79,6 +83,10 @@ encrypted data deduplication solution. https://eprint.iacr.org/2015/455.pdf
   </ul>
 
   <ul class="menu__inner menu__inner--mobile">
+    
+      
+        <li><a href="/posts">Blog</a></li>
+      
     
       
         <li><a href="/projects">Projects</a></li>
@@ -95,12 +103,7 @@ encrypted data deduplication solution. https://eprint.iacr.org/2015/455.pdf
         </span>
       
       <span class="theme-toggle">
-        <svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <path d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
-  3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7
-  13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"/>
-</svg>
-
+        
       </span>
     </span>
   </span>
@@ -132,16 +135,12 @@ encrypted data deduplication solution. https://eprint.iacr.org/2015/455.pdf
     
 
     <div class="post-content">
-      
-
-<p>This simulator was developed to measure the efficiency of an encrypted data
+      <p>This simulator was developed to measure the efficiency of an encrypted data
 deduplication protocol for cloud storage service providers. The protocol
 was developed by the Secure Systems group at the Aalto University School of
 Science.</p>
-
 <p>This simulator consists of various components that can be used to measure the
 efficiency of the deduplication protocol. These components are:</p>
-
 <ul>
 <li>Dataset Collector - Collects file size and popularity data from UNIX
 systems.</li>
@@ -150,19 +149,15 @@ from the collected datasets.</li>
 <li>Simulator - Reads the generated upload request stream and simulates the
 deduplication protocol.</li>
 </ul>
-
 <p>This project also contains some additional tools used during the simulation
 process:</p>
-
 <ul>
 <li>Perfect Protocol Simulator - Measures the perfect deduplication percentage
 for the generated upload request streams that provides a baseline for
 comparisons.</li>
 <li>Oversampler - A tool for generating larger datasets from a collected datasets.</li>
 </ul>
-
 <h2 id="references-and-additional-information">References and Additional Information</h2>
-
 <ul>
 <li>Liu, Jian, N. Asokan, and Benny Pinkas. &ldquo;Secure deduplication of encrypted
 data without additional independent servers.&rdquo; <em>Proceedings of the 22nd ACM
@@ -171,7 +166,9 @@ at <a href="https://eprint.iacr.org/2015/455.pdf">https://eprint.iacr.org/2015/4
 <li>Demo Implementation: <a href="https://git.ssg.aalto.fi/close/cloud-dedup">https://git.ssg.aalto.fi/close/cloud-dedup</a></li>
 </ul>
 
-<p><a target="_blank" rel="noopener" href="https://github.com/sjakthol/dedup-simulator">View in Github</a></p>
+
+<a target="_blank" rel="noopener" href="https://github.com/sjakthol/dedup-simulator">View in Github</a>
+
 
     </div>
     

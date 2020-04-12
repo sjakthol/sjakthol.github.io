@@ -19,7 +19,7 @@
       
       <guid>/projects/rsync-backup/</guid>
       <description>This script can be used to backup local directories over SSH to a remote machine. It uses rsync&amp;rsquo;s --link-dest feature to avoid storing copies of files that have not changed between two snapshots.
-View in Github</description>
+View in Github </description>
     </item>
     
   </channel>
