@@ -7,9 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&lt;span&gt;Powered by &lt;a href=&#34;https://gohugo.io&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Hugo&lt;/a&gt; and &lt;a href=&#34;https://github.com/panr/hugo-theme-hello-friend&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Hello Friend&lt;/a&gt; theme&lt;/a&gt;&lt;/span&gt;</copyright>
+    <lastBuildDate>Sun, 24 May 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Debugging Application Load Balancer TLS Negotiation Errors with Amazon VPC Traffic Mirroring</title>
+      <link>/posts/alb-vpc-traffic-mirroring/</link>
+      <pubDate>Sun, 24 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/alb-vpc-traffic-mirroring/</guid>
+      <description>I recently came across an Application Load Balancer (ALB) that had started to report an increasing number of Client TLS Negotiation Errors.
+If you have ever tried to determine the cause of these errors, you might know the ALB does not provide any detail on why these errors occur. Failed connection attempts are not even logged into the ALB Access Logs. The ALB just reports each failed connection by incrementing the ClientTLSNegotiationErrorCount metric in CloudWatch.</description>
+    </item>
     
   </channel>
 </rss>

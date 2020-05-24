@@ -35,7 +35,7 @@
 <meta property="og:description" content="Sami Jaktholm&#39;s personal website" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="/tags/aws/" />
-<meta property="og:updated_time" content="2018-08-31T00:00:00+00:00" /><meta property="og:site_name" content="Sami Jaktholm" />
+<meta property="og:updated_time" content="2020-05-24T00:00:00+00:00" /><meta property="og:site_name" content="Sami Jaktholm" />
 
 
 
@@ -108,6 +108,40 @@
         
   <div class="posts">
     <h1>aws</h1>
+    
+    <div class="post on-list">
+      <h1 class="post-title"><a href="/posts/alb-vpc-traffic-mirroring/">Debugging Application Load Balancer TLS Negotiation Errors with Amazon VPC Traffic Mirroring</a></h1>
+      <div class="post-meta">
+        
+          <span class="post-date">
+            2020-05-24
+          </span>
+        
+        
+        
+      </div>
+
+
+      
+        <span class="post-tags">
+          
+            #<a href="/tags/aws/">aws</a>&nbsp;
+          
+        </span>
+      
+
+      
+
+      <div class="post-content">
+        
+          
+            I recently came across an Application Load Balancer (ALB) that had started to report an increasing number of Client TLS Negotiation Errors.
+If you have ever tried to determine the cause of these errors, you might know the ALB does not provide any detail on why these errors occur. Failed connection attempts are not even logged into the ALB Access Logs. The ALB just reports each failed connection by incrementing the ClientTLSNegotiationErrorCount metric in CloudWatch.
+          
+        
+      </div>
+      <div><a class="read-more button" href="/posts/alb-vpc-traffic-mirroring/">Read More →</a></div>
+    </div>
     
     <div class="post on-list">
       <h1 class="post-title"><a href="/projects/aws-dynamodb-copy/">aws-dynamodb-copy</a></h1>
@@ -259,41 +293,6 @@ and Python.
         
       </div>
       <div><a class="read-more button" href="/projects/aws-kms-crypt/">Read More →</a></div>
-    </div>
-    
-    <div class="post on-list">
-      <h1 class="post-title"><a href="/projects/cfn-execute-changeset/">cfn-execute-change-set</a></h1>
-      <div class="post-meta">
-        
-          <span class="post-date">
-            2017-09-10
-          </span>
-        
-        
-        
-      </div>
-
-
-      
-        <span class="post-tags">
-          
-            #<a href="/tags/aws/">aws</a>&nbsp;
-          
-            #<a href="/tags/cloudformation/">cloudformation</a>&nbsp;
-          
-            #<a href="/tags/nodejs/">nodejs</a>&nbsp;
-          
-        </span>
-      
-
-      
-
-      <div class="post-content">
-        
-          A tool for reviewing and executing AWS CloudFormation change sets.
-        
-      </div>
-      <div><a class="read-more button" href="/projects/cfn-execute-changeset/">Read More →</a></div>
     </div>
     
     <div class="pagination">

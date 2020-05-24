@@ -3,13 +3,28 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/</loc>
-    <lastmod>2019-12-22T08:15:34+00:00</lastmod>
+    <loc>/tags/aws/</loc>
+    <lastmod>2020-05-24T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/aws/</loc>
-    <lastmod>2018-08-31T00:00:00+00:00</lastmod>
+    <loc>/posts/</loc>
+    <lastmod>2020-05-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/alb-vpc-traffic-mirroring/</loc>
+    <lastmod>2020-05-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/</loc>
+    <lastmod>2020-05-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/</loc>
+    <lastmod>2019-12-22T08:15:34+00:00</lastmod>
   </url>
   
   <url>
@@ -29,11 +44,6 @@
   
   <url>
     <loc>/projects/</loc>
-    <lastmod>2018-08-31T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/</loc>
     <lastmod>2018-08-31T00:00:00+00:00</lastmod>
   </url>
   
@@ -140,10 +150,6 @@
   <url>
     <loc>/projects/vpngate-client/</loc>
     <lastmod>2017-09-10T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/posts/</loc>
   </url>
   
   <url>

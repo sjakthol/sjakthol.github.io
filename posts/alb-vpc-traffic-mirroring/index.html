@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+      <title>Debugging Application Load Balancer TLS Negotiation Errors with Amazon VPC Traffic Mirroring :: Sami Jaktholm</title>
+    
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="description" content="I recently came across an Application Load Balancer (ALB) that had started to report an increasing number of Client TLS Negotiation Errors.
+If you have ever tried to determine the cause of these errors, you might know the ALB does not provide any detail on why these errors occur. Failed connection attempts are not even logged into the ALB Access Logs. The ALB just reports each failed connection by incrementing the ClientTLSNegotiationErrorCount metric in CloudWatch."/>
+<meta name="keywords" content=""/>
+<meta name="robots" content="noodp"/>
+<link rel="canonical" href="/posts/alb-vpc-traffic-mirroring/" />
+
+
+
+
+
+<link rel="stylesheet" href="/assets/style.css">
+
+
+<link rel="stylesheet" href="/style.css">
+
+
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/img/apple-touch-icon-144-precomposed.png">
+<link rel="shortcut icon" href="/img/favicon.png">
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Debugging Application Load Balancer TLS Negotiation Errors with Amazon VPC Traffic Mirroring"/>
+<meta name="twitter:description" content="I recently came across an Application Load Balancer (ALB) that had started to report an increasing number of Client TLS Negotiation Errors.
+If you have ever tried to determine the cause of these errors, you might know the ALB does not provide any detail on why these errors occur. Failed connection attempts are not even logged into the ALB Access Logs. The ALB just reports each failed connection by incrementing the ClientTLSNegotiationErrorCount metric in CloudWatch."/>
+
+
+
+<meta property="og:title" content="Debugging Application Load Balancer TLS Negotiation Errors with Amazon VPC Traffic Mirroring" />
+<meta property="og:description" content="I recently came across an Application Load Balancer (ALB) that had started to report an increasing number of Client TLS Negotiation Errors.
+If you have ever tried to determine the cause of these errors, you might know the ALB does not provide any detail on why these errors occur. Failed connection attempts are not even logged into the ALB Access Logs. The ALB just reports each failed connection by incrementing the ClientTLSNegotiationErrorCount metric in CloudWatch." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/posts/alb-vpc-traffic-mirroring/" />
+<meta property="article:published_time" content="2020-05-24T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-05-24T00:00:00+00:00" /><meta property="og:site_name" content="Sami Jaktholm" />
+
+
+
+
+
+
+  </head>
+  <body class="">
+    <div class="container">
+      <header class="header">
+  <span class="header__inner">
+    <a href="/" class="logo" style="text-decoration: none;">
+    
+      <span class="logo__mark"><svg xmlns="http://www.w3.org/2000/svg" class="greater-icon" viewBox="0 0 44 44">
+  <path fill="none" d="M15 8l14.729 14.382L15 35.367"/>
+</svg>
+</span>
+      <span class="logo__text">Sami Jaktholm</span>
+    
+</a>
+
+    <span class="header__right">
+      
+        <nav class="menu">
+  <ul class="menu__inner menu__inner--desktop">
+    
+      
+        
+          <li><a href="/posts">Blog</a></li>
+        
+      
+        
+          <li><a href="/projects">Projects</a></li>
+        
+      
+      
+    
+  </ul>
+
+  <ul class="menu__inner menu__inner--mobile">
+    
+      
+        <li><a href="/posts">Blog</a></li>
+      
+    
+      
+        <li><a href="/projects">Projects</a></li>
+      
+    
+  </ul>
+</nav>
+
+        <span class="menu-trigger">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M0 0h24v24H0z" fill="none"/>
+            <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+          </svg>
+        </span>
+      
+      <span class="theme-toggle">
+        
+      </span>
+    </span>
+  </span>
+</header>
+
+
+      <div class="content">
+        
+  <div class="post">
+    <h2 class="post-title"><a href="/posts/alb-vpc-traffic-mirroring/">Debugging Application Load Balancer TLS Negotiation Errors with Amazon VPC Traffic Mirroring</a></h2>
+    <div class="post-meta">
+      
+        <span class="post-date">
+            2020-05-24
+        </span>
+      
+      
+      
+    </div>
+
+    
+      <span class="post-tags">
+        
+          #<a href="/tags/aws/">aws</a>&nbsp;
+        
+      </span>
+    
+
+    
+
+    <div class="post-content">
+      <p>I recently came across an <a href="https://docs.aws.amazon.com/elasticloadbalancing/latest/application/introduction.html" target="_blank" rel="noopener">Application Load Balancer</a> (ALB) that had started to report an increasing number of Client TLS Negotiation Errors.</p>
+<p><img src="/images/alb-vpc-traffic-mirroring-cw-metrics.png" alt="ALB ClientTLSNegotiationErrorCount"></p>
+<p>If you have ever tried to determine the cause of these errors, you might know the ALB does not provide any detail on why these errors occur. Failed connection attempts are not even logged into the <a href="https://docs.aws.amazon.com/elasticloadbalancing/latest/application/load-balancer-access-logs.html" target="_blank" rel="noopener">ALB Access Logs</a>. The ALB just reports each failed connection by incrementing the <code>ClientTLSNegotiationErrorCount</code> metric in CloudWatch.</p>
+<p>This is not optimal especially if your ALB serves a wide variety of clients. It might be very difficult to find the exact client and client configuration that triggers the error. Additionally, the ALB is a fully managed service. So, you cannot just go in and poke at it to see how exactly are TLS connections failing.</p>
+<p>Fortunately, a year ago, AWS released a new feature, <a href="https://docs.aws.amazon.com/vpc/latest/mirroring/what-is-traffic-mirroring.html" target="_blank" rel="noopener">VPC Traffic Mirroring</a>, that allows you to capture and inspect network traffic within your own VPC. VPC Traffic Mirroring allows you to mirror network traffic from an <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-eni.html" target="_blank" rel="noopener">Elastic Network Interface</a> (ENI) to another ENI (or a Network Load Balancer).</p>
+<p>Now, under the hood, an ALB is just a fleet of AWS managed EC2 instances. These instances attach an ENI into your VPC through which all network traffic between the clients, targets and the ALB flows. Therefore, it should be possible to mirror network traffic of an ALB, and capture TLS handshakes for analysis.</p>
+<h2 id="setting-up-vpc-traffic-mirroring">Setting up VPC Traffic Mirroring</h2>
+<p>You&rsquo;ll need to configure the following to mirror network traffic in a VPC:</p>
+<ul>
+<li><strong>Source</strong>: An ENI of an EC2 Nitro instance from which packets are mirrored from.</li>
+<li><strong>Target</strong>: An ENI of an EC2 instance or a NLB to which packets are mirrored to.</li>
+<li><strong>Mirror Filter</strong>: A set of rules that define which packets are mirrored.</li>
+<li><strong>Mirror Session</strong>: Definition for how to mirror traffic from a <strong>Source</strong> into <strong>Target</strong> and which <strong>Mirror Filters</strong> are used.</li>
+</ul>
+<p><img src="/images/alb-vpc-traffic-mirroring-alb-eni.png" alt="ENI of an ALB"></p>
+<p>In our case, the source will be an ENI of the ALB and the target will be an EC2 instance we have access to. Since we want to debug client - ALB connections, we need to setup a mirror filter that only captures those packets. Remember, the ALB uses the same ENI to communicate with the clients in the internet and with the targets in the VPC. Since we are only interested in the traffic between the ALB and the clients, we can ignore traffic the ALB sends to the targets in the VPC.</p>
+<h4 id="mirror-filters">Mirror Filters</h4>
+<p>A mirror filter contains filter rules that either accept or reject a package for mirroring. Filtering is based on layer 3 and layer 4 properties: source and destination IPs, source and destinations ports, L4 protocol (e.g. TCP, UDP), and the direction of the traffic.</p>
+<p>In our case, we can achieve the desired outcome with the following rules (in this priority order):</p>
+<ol>
+<li>Reject TCP ingress from <code>&lt;VPC CIDR&gt;</code>, source port 0-65535 to <code>&lt;VPC CIDR&gt;</code>, destination port 0-65535 (reject packets from targets to ALB).</li>
+<li>Reject TCP egress from <code>&lt;VPC CIDR&gt;</code>, source port 0-65535 to <code>&lt;VPC CIDR&gt;</code>, destination port 0-65535 (reject packets from ALB to targets).</li>
+<li>Accept TCP ingress from <code>0.0.0.0/0</code>, source port 0-65535 to <code>0.0.0.0/0</code>, destination port 443 (mirror packets from clients to ALB).</li>
+<li>Accept TCP egress from <code>0.0.0.0/0</code>, source port 443 to <code>0.0.0.0/0</code>, destination port 0-65535 (mirror packets from ALB to clients).</li>
+</ol>
+<p>Where <code>&lt;VPC CIDR&gt;</code> is the CIDR of the VPC. Filter rules are evaluated in order of their numeric priorities, and evaluation stops at the first matching rule. Hence, in our case, the priority of the reject rules must be higher than the priority of accept rules.</p>
+<h4 id="mirror-session">Mirror Session</h4>
+<p>With all the details sorted out, we can create a mirror session and start mirroring traffic from the ALB to our EC2 instance. However, you might receive the following error when doing this:</p>
+<blockquote>
+<p>NetworkInterfaceNotSupported: eni-xxxxxxxxxxxxxxxxx must be attached to a supported instance.</p>
+</blockquote>
+<p>This error means that, under the hood, the ALB is using an EC2 instance that does not support traffic mirroring. Traffic mirroring is only supported for ENIs of instances using the AWS Nitro System (e.g. t3, m5, c5 and r5 instances). You cannot mirror traffic from an ENI that is attached to a non-Nitro instance (e.g. previous generation m4, c4 and r4 instances). Unfortunately, you cannot determine the instance type the ALB uses beforehand. The only way to see if mirroring is supported is to try it out.</p>
+<p>If you happen to have an ALB that uses previous generation, non-Nitro instances, contact AWS Support. They should be able reconfigure your ALB to make it support traffic mirroring. If you are just testing this out, you should do the test on a newer region (like Europe (Stockholm) / <code>eu-north-1</code>). Newer regions lack previous generation instances which means all ALBs running on those regions use EC2 Nitro instances by default.</p>
+<h2 id="capturing-mirrored-traffic">Capturing Mirrored Traffic</h2>
+<p>Once the mirror session is created, VPC starts to mirror packets from the source ENI into the target ENI. VPC encapsulates mirrored packets with a <a href="https://tools.ietf.org/html/rfc7348" target="_blank" rel="noopener">VXLAN header</a> and sends them to the target ENI port 4789 over UDP. To capture the traffic, the target instance needs to 1) listen for UDP packets on port 4789, and 2) strip the VXLAN header from the received payloads.</p>
+<p>You can use the following commands to create a new VXLAN interface to receive the mirrored traffic:</p>
+<pre><code># ip link add capture0 type vxlan id 12345 local 10.0.0.83 remote 10.0.0.84 dev eth0 dstport 4789
+# ip link set capture0 up
+</code></pre><p>These commands create a new network interface, <code>capture0</code>, that receives traffic sent to <code>eth0</code> port <code>4789</code> with VXLAN ID <code>12345</code>. The VXLAN ID must match the VXLAN ID defined in the mirror session configuration.</p>
+<p>You can now use <code>tcpdump</code> to see the mirrored traffic:</p>
+<pre><code># tcpdump -n -i capture0 -vv
+</code></pre><h2 id="analyzing-tls-negotiation-errors">Analyzing TLS Negotiation Errors</h2>
+<p>We now have the ability to see packets flowing between the ALB and the clients. We can use this ability to capture TLS handshakes and determine why they are failing.</p>
+<p>Let&rsquo;s make <code>tcpdump</code> capture mirrored traffic and write them into a <code>pcap</code> file:</p>
+<pre><code>tcpdump -n -i capture0 -w capture.pcap
+</code></pre><p>We can then load <code>capture.pcap</code> into e.g. <a href="https://www.wireshark.org/" target="_blank" rel="noopener">Wireshark</a> to analyze it. You can use the following filter to find TLS Alert Messages which indicate a failure during a TLS handshake:</p>
+<pre><code>tls.alert_message.level == 2
+</code></pre><p><img src="/images/alb-vpc-traffic-mirroring-tls-errors.png" alt="TLS Alert Messages in Wireshark"></p>
+<p>In this (staged) example, we can see that the reason for the TLS Negotiation Errors is that the client does not trust the certificate (or the CA who signed the certificate) the ALB presents to it. With this information, we might be able to take some action to reduce the number of these errors.</p>
+<hr>
+<p>Unfortunately, in the original case the clients were bailing out with a rather generic <code>bad_certificate</code> alert. <a href="https://tools.ietf.org/html/rfc5246" target="_blank" rel="noopener">RFC 5246</a> defines this alert message as</p>
+<blockquote>
+<p>A certificate was corrupt, contained signatures that did not verify correctly, etc.</p>
+</blockquote>
+<p>which can mean pretty much anything (corruption on the wire, broken middlebox, misconfigured client etc.).</p>
+<p>The source of errors in the original case remained a mystery even after trying to identify the clients by <a href="https://github.com/salesforce/ja3" target="_blank" rel="noopener">fingerprinting their TLS ClientHellos</a> (they all had the same fingerprint which indicates the errors were caused by a specific client version) and analyzing the source IPs of the failing connections (they were coming from many unique IPs from all over the world). Oh well, at least I learned some new tricks along the way.</p>
+<p>If you want to try this at home, check out <a href="https://github.com/sjakthol/aws-vpc-traffic-mirroring" target="_blank" rel="noopener">sjakthol/aws-vpc-traffic-mirroring</a> repository in GitHub. The repository contains CloudFormation templates as well as instructions for setting up VPC traffic mirroring for your VPCs (and ALBs as well).</p>
+<h2 id="additional-links-and-references">Additional Links and References</h2>
+<ul>
+<li><a href="https://docs.aws.amazon.com/vpc/latest/mirroring/what-is-traffic-mirroring.html" target="_blank" rel="noopener">VPC Traffic Mirroring</a>, AWS Documentation, AWS.</li>
+<li><a href="https://cloudshark.io/articles/aws-vpc-traffic-mirroring-cloud-packet-capture/" target="_blank" rel="noopener">Troubleshooting AWS Environments Using Packet Captures</a>, CloudShark.</li>
+</ul>
+
+    </div>
+    
+
+    
+
+    </div>
+
+      </div>
+
+      
+        <footer class="footer">
+  <div class="footer__inner">
+    
+      <div class="copyright copyright--user"><span>Powered by <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a> and <a href="https://github.com/panr/hugo-theme-hello-friend" target="_blank" rel="noopener">Hello Friend</a> theme</a></span></div>
+    
+  </div>
+</footer>
+
+<script src="/assets/main.js"></script>
+<script src="/assets/prism.js"></script>
+
+
+      
+    </div>
+
+    
+  </body>
+</html>
